@@ -16,7 +16,7 @@
   --fs--heading--l: 4rem;
   --fs--heading--m: 3.2rem;
   --fs--heading--s-1: 2rem;
-  --fs--heading--s-1: 2.4rem;
+  --fs--heading--s-2: 2.4rem;
   --fs--heading--xs-1: 1.8rem;
   --fs--heading--xs-2: 2.4rem;
 
@@ -44,7 +44,9 @@ blockquote,
 dl,
 dd,
 ul,
-ol {
+ol,
+li,
+article {
   margin: 0;
   padding: 0;
 }
@@ -167,9 +169,6 @@ a:focus {
   gap: 3rem;
 }
 
-.section--main-content {
-  margin-bottom: 6.5rem;
-}
 
 .main-content__img {
   /* margin-bottom: 3.4rem;
@@ -184,6 +183,9 @@ a:focus {
 .main__description {
   grid-area: 2/2/3/3;
 } */
+.section--main-content {
+  margin-bottom: 6.5rem;
+}
 
 .heading--primary {
   font-size: var(--fs--heading--xl);
@@ -191,6 +193,13 @@ a:focus {
 
   color: var(--neutral-color--dark-blue);
   line-height: 5.6rem;
+}
+
+.main-content__img {
+  margin-bottom: 3.4rem;
+}
+.main-content__text-box {
+  margin-bottom: 2.9rem;
 }
 
 .btn--red {
@@ -224,19 +233,30 @@ a:active {
 }
 .article-section {
   background-color: var(--neutral-color--dark-blue);
-  padding: 2.4rem 3.1rem;
-  margin-bottom: 6.5rem;
-  max-width: 35rem;
+  padding: 2.4rem 3.1rem 0 2.4rem;
+  max-height: 51rem;
+}
 
-  /* max-height: 51.7rem; */
-  /* grid-area: 1/2/1/4; */
+.main-content__grid {
+  display: grid;
+  grid-template-columns: 1fr 35rem;
+  column-gap: 3rem;
+}
+.main__text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .article__wrapper {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  gap: 2.9rem;
+  justify-content: flex-start;
+  align-items: center; */
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  overflow: hidden;
 }
 
 .heading--secondary {
@@ -248,7 +268,6 @@ a:active {
 }
 
 .heading--tertiary {
-  font-size: var(--fs--heading--s-1);
   font-weight: var(--fw--800);
   /* margin-bottom: 0.8rem;
   margin-top: 3.1rem; */
@@ -257,6 +276,7 @@ a:active {
 .heading--tertiary a:link,
 .heading--tertiary a:visited {
   color: var(--neutral-color--off-white);
+  font-size: var(--fs--heading--s-1);
 }
 .heading--tertiary a:hover,
 .heading--tertiary a:active {
@@ -270,11 +290,14 @@ a:active {
 }
 
 .article__list li {
+  margin-bottom: 3.1rem;
+  padding-bottom: 2.9rem;
   border-bottom: 1px solid hsla(236, 13%, 42%, 1);
 }
 
 .article__list li:last-child {
   border: none;
+  padding: 0;
 }
 
 .section--trending {
