@@ -117,7 +117,7 @@ body {
   font-size: 1.5rem;
   max-width: 144rem;
   padding: 0 16.6rem;
-  background-color: var(--neutral-color--off-white);
+  background-color: #f2f2f2;
   font-weight: var(--fw--400);
   color: var(--neutral-color--dark-grayish);
   line-height: 2.6rem;
