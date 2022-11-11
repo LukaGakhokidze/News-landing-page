@@ -121,6 +121,7 @@ body {
   font-weight: var(--fw--400);
   color: var(--neutral-color--dark-grayish);
   line-height: 2.6rem;
+  margin: 0 auto;
 }
 
 .header--primary {
@@ -347,4 +348,11 @@ a:active {
 
 .trending__image {
   width: 10rem;
+}
+
+.attribution {
+  font-size: 1rem;
+}
+.attribution a {
+  color: var(--primary-color--orange);
 }
